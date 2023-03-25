@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = '';
+const initialState = 'UAH';
 
 export const currencySlice = createSlice({
   name: 'currency',
