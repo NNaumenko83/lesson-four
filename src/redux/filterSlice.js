@@ -2,18 +2,18 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = '';
 
-export const filterSlice = createSlice({
-  name: 'filter',
+export const currencySlice = createSlice({
+  name: 'currency',
   initialState,
   reducers: {
-    filterChange(state, action) {
-           return (state = action.payload);
+    currencyChange(state, action) {
+      return (state = action.payload);
     },
   },
 });
 
-export const { filterChange } = filterSlice.actions;
+export const { currencyChange } = currencySlice.actions;
 
-export default filterSlice.reducer;
+export default currencySlice.reducer;
 
-export const getFilterValue = state => state.filter;
+export const getCurrencyValue = state => state.currency;
