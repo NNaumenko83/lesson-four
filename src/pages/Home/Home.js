@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { getCurrencyValue } from 'redux/filterSlice';
 import { useGetCurrencyQuery } from 'redux/exchangesApi';
 
-const arrCurrency = ['UAH, USD, EUR'];
+const arrCurrency = ['UAH', 'USD', 'EUR'];
 
 const Home = () => {
   const currency = useSelector(getCurrencyValue);
@@ -10,7 +10,7 @@ const Home = () => {
 
   const filteredCurrency = arrCurrency
     .filter(item => item !== currency)
-    .join('%20');
+    .join(',');
   console.log('Home ~ filteredCurrency:', filteredCurrency);
   const exchange = useGetCurrencyQuery({
     symbols: filteredCurrency,
